@@ -13,3 +13,19 @@ C:\apache-tomcat-8.5.43_x64\bin>service.bat install
 
 [ 서비스 해제 ]
 C:\apache-tomcat-8.5.43_x64\bin>service.bat remove
+
+//////////////////////////////////////////////////////////
+
+톰캣 메모리 설정 (늘리기)
+[ service.bat 파일 수정 ]
+C:\apache-tomcat-8.5.43_x64\bin\service.bat
+
+setlocal
+set "JAVA_HOME=C:\java\x64\jdk1.8.0_131"
+set "JRE_HOME=C:\java\x64\jre1.8.0_13"
+set "JvmMs=1024"
+set "JvmMx=2048"
+
+[ 제대로 설정되었는지 확인 ]
+logs/catalina.년월일.log
+
