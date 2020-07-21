@@ -1,0 +1,15 @@
+
+윈도우즈에서 톰캣 실행 JRE 경로 수동 설정
+
+[ service.bat 파일 수정 ]
+C:\apache-tomcat-8.5.43_x64\bin\service.bat
+
+setlocal
+set "JAVA_HOME=C:\java\x64\jdk1.8.0_131"
+set "JRE_HOME=C:\java\x64\jre1.8.0_13"
+
+[ 서비스 등록 ]
+C:\apache-tomcat-8.5.43_x64\bin>service.bat install
+
+[ 서비스 해제 ]
+C:\apache-tomcat-8.5.43_x64\bin>service.bat remove
